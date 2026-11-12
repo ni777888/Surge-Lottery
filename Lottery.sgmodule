@@ -1,0 +1,10 @@
+#!name=体彩福彩开奖助手
+#!desc=8种彩票官方开奖面板及新期开奖通知
+#!system=ios
+
+[Script]
+LotteryPanel = type=generic,script-path=https://raw.githubusercontent.com/ni777888/Surge-Lottery/main/lottery-panel.js,timeout=90,script-update-interval=86400
+LotteryNotify = type=cron,cronexp="*/30 * * * *",wake-system=true,script-path=https://raw.githubusercontent.com/ni777888/Surge-Lottery/main/lottery-notify.js,timeout=90,script-update-interval=86400
+
+[Panel]
+LotteryResults = title="体彩 · 福彩开奖结果",content="刷新查看8种彩票官方开奖",style=info,script-name=LotteryPanel,update-interval=1800
